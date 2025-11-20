@@ -54,8 +54,8 @@ dgpM <- 3
 dgpR <- cbind(c(2,2,2,2),c(2,2,2,2))
 dgpPs <- c(25, 50)
 dgpdeltas <- c(0.6,0.8)
-dgpC <- matrix(c(1,0,2,1),nrow = 2, byrow = TRUE)
-dgpD <- matrix(c(1,2,0,1),nrow = 2, byrow = TRUE)
+dgpC <- matrix(c(0.5,0,1,0.5),nrow = 2, byrow = TRUE)
+dgpD <- matrix(c(0.5,1,0,0.5),nrow = 2, byrow = TRUE)
 Mat <- NULL
 for (nnn in 1:length(dgpNs)) {
   dgpN <- dgpNs[nnn]
@@ -102,9 +102,9 @@ dgpM <- 3
 dgpR <- cbind(c(4,4,4,4),c(4,4,4,4))
 dgpPs <- c(25, 50)
 dgpdeltas <- c(0.6,0.8)
-dgpC <- matrix(c(1,0,0,0,2,1,0,0,0,0,0,0,0,0,0,0),
+dgpC <- matrix(c(0.5,0,0,0, 1,0.5,0,0, 0,0,0,0, 0,0,0,0),
                nrow = 4, byrow = TRUE)
-dgpD <- matrix(c(1,2,0,0,0,1,0,0,0,0,0,0,0,0,0,0),
+dgpD <- matrix(c(0.5,1,0,0, 0,0.5,0,0, 0,0,0,0, 0,0,0,0),
                nrow = 4, byrow = TRUE)
 Mat <- NULL
 for (nnn in 1:length(dgpNs)) {

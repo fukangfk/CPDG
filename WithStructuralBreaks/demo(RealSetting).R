@@ -44,8 +44,8 @@ dgpPd <- c(151,150,60)
 glabel <- rep(1:dgpM, times=dgpPd)
 dgpK <- round(c(0.7472,0.3888)*dgpN)
 dgpdeltas <- c(0.6,0.8)
-dgpC <- matrix(c(1,0,2,1),nrow = 2, byrow = TRUE)
-dgpD <- matrix(c(1,2,0,1),nrow = 2, byrow = TRUE)
+dgpC <- matrix(c(0.5,0,1,0.5),nrow = 2, byrow = TRUE)
+dgpD <- matrix(c(0.5,1,0,0.5),nrow = 2, byrow = TRUE)
 Mat <- NULL
 
 for (ddd in 1:length(dgpdeltas)) {
@@ -82,9 +82,9 @@ glabel <- rep(1:dgpM, times=dgpPd)
 dgpK <- round(c(0.7472,0.3888)*dgpN)
 dgpdeltas <- c(0.6,0.8)
 
-dgpC <- matrix(c(1,0,0,0,2,1,0,0,0,0,0,0,0,0,0,0),
+dgpC <- matrix(c(0.5,0,0,0,1,0.5,0,0,0,0,0,0,0,0,0,0),
                nrow = 4, byrow = TRUE)
-dgpD <- matrix(c(1,2,0,0,0,1,0,0,0,0,0,0,0,0,0,0),
+dgpD <- matrix(c(0.5,1,0,0,0,0.5,0,0,0,0,0,0,0,0,0,0),
                nrow = 4, byrow = TRUE)
 Mat <- NULL
 
@@ -111,6 +111,6 @@ for (ddd in 1:length(dgpdeltas)) {
   Mat <- rbind(Mat,Mat1)
   o <- paste0("result3-1.csv", sep="")
   write.csv(Mat, o)
-  }
+}
 
 

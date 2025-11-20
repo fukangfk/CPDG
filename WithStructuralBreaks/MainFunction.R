@@ -152,7 +152,7 @@ dgpf2 <- function(dgpN, dgpPd, dgpR, dgpM, dgpK, dgpdelta, dgpC, dgpD){
   
   
   # grouped label
-  glabel <- rep(1:dgpM, times = dgpP)
+  glabel <- rep(1:dgpM, times = dgpPd)
   
   ZeroOne <- c(-1, 1)
   # generate X

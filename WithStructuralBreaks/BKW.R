@@ -177,7 +177,7 @@ BKWLS <- function(Y,r,plfG,Ks){
 BKWLS.CP <- function(Y,L){
   N <- nrow(Y); p <- ncol(Y)
   R.result <- estinumfactor0(Y,ceiling(p/4))
-  r <- R.result$ER
+  r <- R.result$IC1
   Factor.result <- estifactor0(Y,r)
   Ghat <- as.matrix(Factor.result$Ghat)
   
